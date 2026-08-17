@@ -1,1 +1,0 @@
-print("IT/SW Agent 프로젝트 시작")

@@ -1,4 +1,4 @@
-from schemas import (
+from it_sw_agent.domain.schemas import (
     BAOutput,
     PlannerOutput,
     POOutput,
@@ -11,7 +11,7 @@ from schemas import (
     WorkflowStage,
     WorkflowStatus,
 )
-from workflow import RequirementWorkflow, RoleOutput, WorkflowError
+from it_sw_agent.application.workflow import RequirementWorkflow, RoleOutput, WorkflowError
 
 
 def complete_runner(

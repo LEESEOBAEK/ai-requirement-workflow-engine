@@ -3,7 +3,7 @@ from datetime import date, datetime, timezone
 import pytest
 from pydantic import ValidationError
 
-from schemas import (
+from it_sw_agent.domain.schemas import (
     BAOutput,
     ExecutionRecord,
     ExecutionStatus,

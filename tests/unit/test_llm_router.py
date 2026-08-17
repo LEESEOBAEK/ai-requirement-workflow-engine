@@ -2,8 +2,13 @@ import json
 
 import pytest
 
-from llm_router import LLMRequest, LLMRoleRouter, RouterError, build_request
-from schemas import (
+from it_sw_agent.infrastructure.llm_router import (
+    LLMRequest,
+    LLMRoleRouter,
+    RouterError,
+    build_request,
+)
+from it_sw_agent.domain.schemas import (
     BAOutput,
     PlannerOutput,
     POOutput,
@@ -13,7 +18,7 @@ from schemas import (
     WorkflowStage,
     WorkflowStatus,
 )
-from workflow import RequirementWorkflow
+from it_sw_agent.application.workflow import RequirementWorkflow
 
 
 def test_build_request_contains_stage_schema_and_current_state() -> None:

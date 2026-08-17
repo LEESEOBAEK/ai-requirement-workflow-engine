@@ -21,20 +21,20 @@ Planner → Service Planner → BA → PM → PO → 개발 Task
 
 ```text
 .
-├─ api/
-│  ├─ __init__.py
+├─ src/it_sw_agent/
+│  ├─ domain/schemas.py
+│  ├─ application/workflow.py
+│  ├─ application/service.py
+│  ├─ infrastructure/llm_router.py
+│  ├─ interfaces/api.py
 │  └─ main.py
-├─ tests/
-│  ├─ test_schemas.py
-│  ├─ test_workflow.py
-│  ├─ test_llm_router.py
-│  ├─ test_application.py
-│  └─ test_api.py
-├─ schemas.py
-├─ workflow.py
-├─ llm_router.py
-├─ application.py
-├─ main.py
+├─ tests/unit/
+├─ tests/integration/
+├─ docs/
+├─ prompts/
+├─ experiments/
+├─ examples/
+├─ data/
 ├─ pyproject.toml
 └─ uv.lock
 ```
@@ -57,7 +57,7 @@ uv run pytest
 ## FastAPI 서버
 
 ```powershell
-uv run uvicorn api.main:app --reload
+uv run uvicorn it_sw_agent.interfaces.api:app --reload
 ```
 
 API 문서:
@@ -70,8 +70,9 @@ API 문서:
 
 ## 개발 원칙
 
-- `schemas.py`는 데이터 계약과 검증만 담당합니다.
-- `workflow.py`는 역할 순서와 상태 전이만 담당합니다.
-- `llm_router.py`는 LLM 요청과 응답 변환을 담당합니다.
-- `application.py`는 CLI·API·에이전트가 공유하는 실행 계층입니다.
+- `domain`은 데이터 계약과 도메인 규칙만 담당합니다.
+- `application`은 업무 흐름과 실행 유스케이스를 담당합니다.
+- `infrastructure`는 외부 LLM·DB·파일 시스템 연결을 담당합니다.
+- `interfaces`는 FastAPI와 향후 Codex·Claude Code·Antigravity 어댑터를 담당합니다.
 - API 키와 비밀값은 `.env`에 저장하고 Git에 커밋하지 않습니다.
+- 검증 전 코드는 `experiments`에 두고, 검증된 코드만 `src`로 승격합니다.

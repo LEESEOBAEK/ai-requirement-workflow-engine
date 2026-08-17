@@ -4,9 +4,9 @@ from __future__ import annotations
 
 from fastapi import FastAPI, HTTPException
 
-from application import RequirementRunCommand, run_requirement
-from schemas import RequirementState
-from workflow import RoleRunner
+from it_sw_agent.application.service import RequirementRunCommand, run_requirement
+from it_sw_agent.application.workflow import RoleRunner
+from it_sw_agent.domain.schemas import RequirementState
 
 
 def create_app(runner: RoleRunner | None = None) -> FastAPI:

@@ -9,3 +9,7 @@ dist/
 build/
 .coverage
 htmlcov/
+data/runtime/
+data/outputs/
+logs/
+experiments/output/
