@@ -14,7 +14,7 @@ from typing import TypeAlias, cast
 
 from pydantic import BaseModel, ValidationError
 
-from it_sw_agent.domain.schemas import (
+from requirement_workflow.domain.schemas import (
     BAOutput,
     PlannerOutput,
     POOutput,

@@ -4,8 +4,8 @@ from __future__ import annotations
 
 from pydantic import BaseModel, ConfigDict, Field
 
-from it_sw_agent.application.workflow import RequirementWorkflow, RoleRunner
-from it_sw_agent.domain.schemas import RequirementState
+from requirement_workflow.application.workflow import RequirementWorkflow, RoleRunner
+from requirement_workflow.domain.schemas import RequirementState
 
 
 class RequirementRunCommand(BaseModel):

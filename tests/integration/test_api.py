@@ -1,7 +1,7 @@
 from fastapi.testclient import TestClient
 
-from it_sw_agent.interfaces.api import create_app
-from it_sw_agent.domain.schemas import (
+from requirement_workflow.interfaces.api import create_app
+from requirement_workflow.domain.schemas import (
     BAOutput,
     PlannerOutput,
     POOutput,
@@ -13,7 +13,7 @@ from it_sw_agent.domain.schemas import (
     TaskArea,
     WorkflowStage,
 )
-from it_sw_agent.application.workflow import RoleOutput
+from requirement_workflow.application.workflow import RoleOutput
 
 
 def fake_runner(

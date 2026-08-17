@@ -1,12 +1,16 @@
 [project]
-name = "it-sw-agent"
+name = "ai-requirement-workflow-engine"
 version = "0.1.0"
+description = "An AI-powered workflow engine for refining IT/SW requirements into development-ready specifications."
 requires-python = ">=3.12"
 dependencies = [
     "fastapi>=0.115,<1.0",
     "pydantic>=2.13.4",
     "uvicorn>=0.30,<1.0",
 ]
+
+[project.urls]
+Repository = "https://github.com/LEESEOBAEK/ai-requirement-workflow-engine"
 
 [build-system]
 requires = ["hatchling"]
@@ -22,4 +26,4 @@ pythonpath = ["src"]
 testpaths = ["tests"]
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/it_sw_agent"]
+packages = ["src/requirement_workflow"]

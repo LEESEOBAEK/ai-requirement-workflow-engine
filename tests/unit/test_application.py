@@ -1,8 +1,8 @@
 import pytest
 from pydantic import ValidationError
 
-from it_sw_agent.application.service import RequirementRunCommand, run_requirement
-from it_sw_agent.domain.schemas import (
+from requirement_workflow.application.service import RequirementRunCommand, run_requirement
+from requirement_workflow.domain.schemas import (
     BAOutput,
     PlannerOutput,
     POOutput,
@@ -15,7 +15,7 @@ from it_sw_agent.domain.schemas import (
     WorkflowStage,
     WorkflowStatus,
 )
-from it_sw_agent.application.workflow import RoleOutput
+from requirement_workflow.application.workflow import RoleOutput
 
 
 def fake_runner(

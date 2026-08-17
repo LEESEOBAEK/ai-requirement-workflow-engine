@@ -7,7 +7,7 @@ from __future__ import annotations
 from collections.abc import Callable
 from typing import TypeAlias
 
-from it_sw_agent.domain.schemas import (
+from requirement_workflow.domain.schemas import (
     BAOutput,
     ExecutionRecord,
     ExecutionStatus,
